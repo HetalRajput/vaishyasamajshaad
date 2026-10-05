@@ -3,6 +3,9 @@ node_modules/
 dist/
 build/
 
+# Backend is maintained in a separate repository
+/vss_back/
+
 # Local environment files (templates remain tracked)
 .env
 .env.*
@@ -11,10 +14,6 @@ build/
 # Runtime files
 *.log
 coverage/
-
-# User uploads must live in persistent/object storage in production
-vss_back/uploads/*
-!vss_back/uploads/.gitkeep
 
 # OS/editor files
 .DS_Store

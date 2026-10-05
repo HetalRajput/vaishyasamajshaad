@@ -1,22 +1,11 @@
-# Vaishya Samaj Shaadi
+# Vaishya Samaj Shaadi Frontend
 
-Full-stack application organized as a Git/Hostinger-ready monorepo.
-
-## Applications
-
-- `vss_front` — React 18 frontend built with Vite
-- `vss_back` — Express API written in TypeScript with a MySQL database
+React 18 frontend built with Vite. The backend is maintained and deployed from a
+separate Git repository.
 
 ## Local development
 
-Create local environment files from each `.env.example` file, then run the apps
-in separate terminals:
-
-```powershell
-cd vss_back
-npm install
-npm run dev
-```
+Create `vss_front/.env` from `vss_front/.env.example`, then start the frontend:
 
 ```powershell
 cd vss_front
@@ -24,9 +13,10 @@ npm install
 npm run dev
 ```
 
-The frontend defaults to `http://localhost:8080` for API calls.
+The frontend defaults to `http://localhost:8080` for API calls. Set
+`VITE_API_URL` to the separately deployed backend address.
 
 ## Production
 
-See [HOSTINGER_DEPLOYMENT.md](HOSTINGER_DEPLOYMENT.md) for the GitHub and Hostinger
-configuration, required environment variables, and launch checklist.
+See [HOSTINGER_DEPLOYMENT.md](HOSTINGER_DEPLOYMENT.md) for the frontend GitHub and
+Hostinger configuration.
