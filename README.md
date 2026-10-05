@@ -1,9 +1,32 @@
-Enjoy the Free code + Assets 😍
+# Vaishya Samaj Shaadi
 
-- Support us on YouTube Channel: https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ
+Full-stack application organized as a Git/Hostinger-ready monorepo.
 
+## Applications
 
-Currently, two official plugins are available:
+- `vss_front` — React 18 frontend built with Vite
+- `vss_back` — Express API written in TypeScript with a MySQL database
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Local development
+
+Create local environment files from each `.env.example` file, then run the apps
+in separate terminals:
+
+```powershell
+cd vss_back
+npm install
+npm run dev
+```
+
+```powershell
+cd vss_front
+npm install
+npm run dev
+```
+
+The frontend defaults to `http://localhost:8080` for API calls.
+
+## Production
+
+See [HOSTINGER_DEPLOYMENT.md](HOSTINGER_DEPLOYMENT.md) for the GitHub and Hostinger
+configuration, required environment variables, and launch checklist.
