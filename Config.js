@@ -1,14 +1,18 @@
-const withTrailingSlash = (value) => `${value.replace(/\/$/, "")}/`;
+const withTrailingSlash = (value) => `${value.replace(/\/+$/, "")}/`;
 
-// Set VITE_API_URL in Hostinger before building the frontend.
+const defaultApiUrl = import.meta.env.DEV
+  ? "http://localhost:8080"
+  : window.location.origin;
+
+// Configure VITE_API_URL when the API is hosted on another origin.
 export const Base_URL = withTrailingSlash(
-  import.meta.env.VITE_API_URL || "http://localhost:8080"
+  import.meta.env.VITE_API_URL || defaultApiUrl
 );
 export const Image_URL = withTrailingSlash(
   import.meta.env.VITE_IMAGE_URL || `${Base_URL}uploads`
 );
 export const Theme_Color = "rgb(255,20,146)";
-export const DefaultKey = "TechbysonVSS9111321654";  
+export const PublicApiKey = import.meta.env.VITE_PUBLIC_API_KEY || "";
 // rgb(255,20,146) 
 // ${Theme_Color}
 

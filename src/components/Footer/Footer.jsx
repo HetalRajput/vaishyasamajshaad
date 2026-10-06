@@ -86,10 +86,10 @@ const Footer = () => {
             {/* social handles */}
             <div>
               <div className="flex items-center gap-3 mt-6">
-                <a href="https://www.instagram.com/vaishyasamajshaadi/" target="_blank">
+                <a href="https://www.instagram.com/vaishyasamajshaadi/" target="_blank" rel="noopener noreferrer" aria-label="Vaishya Samaj Shaadi on Instagram">
                   <FaInstagram className="text-3xl" />
                 </a>
-                <a href="https://www.facebook.com/groups/7806633309347817/" target="_blank">
+                <a href="https://www.facebook.com/groups/7806633309347817/" target="_blank" rel="noopener noreferrer" aria-label="Vaishya Samaj Shaadi on Facebook">
                   <FaFacebook className="text-3xl" />
                 </a>
               </div>

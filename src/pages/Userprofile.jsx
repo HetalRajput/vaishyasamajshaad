@@ -1,7 +1,7 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Base_URL, DefaultKey } from "../../Config";
+import { Base_URL, PublicApiKey } from "../../Config";
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { addToWishList, calculateAge } from "../Services";
@@ -14,11 +14,10 @@ const UserProfile = () => {
     const userId = param.id;
     const LoggedId = getLocalStorageItem('Id')
     const url = window.location.pathname.split('/').pop();
-    const token = DefaultKey
     const CONFIG_OBJ = {
         headers: {
             "Content-Type": "application/json",
-            "Authorization": 'key ' + token
+            ...(PublicApiKey && { "Authorization": `key ${PublicApiKey}` })
         }
     }
     const getUserById = async () => {
