@@ -1,18 +1,14 @@
-const withTrailingSlash = (value) => `${value.replace(/\/+$/, "")}/`;
-
-const defaultApiUrl = import.meta.env.DEV
-  ? "http://localhost:8080"
-  : window.location.origin;
-
-// Configure VITE_API_URL when the API is hosted on another origin.
-export const Base_URL = withTrailingSlash(
-  import.meta.env.VITE_API_URL || defaultApiUrl
-);
-export const Image_URL = withTrailingSlash(
-  import.meta.env.VITE_IMAGE_URL || `${Base_URL}uploads`
-);
+// URL FOR PRODUCTION  
+export const Base_URL = 'https://vss.makeseven.xyz/';
+// export const Base_URL = 'https://vss.codedilse.xyz/';
+export const Image_URL = 'https://vss.makeseven.xyz/uploads/';
+// export const Base_URL = 'https://vaisyashaadi.xyz/';
+// export const Image_URL = 'https://vaisyashaadi.xyz/uploads/';
+// URL FOR DEVELOPMENT
+// export const Base_URL = 'http://localhost:3333/';
+// export const Image_URL = 'http://localhost:3333/uploads/';
 export const Theme_Color = "rgb(255,20,146)";
-export const PublicApiKey = import.meta.env.VITE_PUBLIC_API_KEY || "";
+export const DefaultKey = "TechbysonVSS9111321654";  
 // rgb(255,20,146) 
 // ${Theme_Color}
 
